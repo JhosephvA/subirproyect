@@ -1,0 +1,163 @@
+/* ======= RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======= CUERPO ======= */
+body {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  min-height: 100vh;
+  color: #2d3436;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======= ENCABEZADO ======= */
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin-top: 40px;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* ======= NAVEGACIÓN ======= */
+nav {
+  margin: 25px 0 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 12px 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ======= CONTENEDOR PRINCIPAL ======= */
+main {
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease;
+}
+
+/* ======= TEXTO ======= */
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #2d3436;
+  text-align: justify;
+}
+
+/* ======= FORMULARIO ======= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #2d3436;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 8px rgba(116, 185, 255, 0.6);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ======= BOTÓN ======= */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0984e3, #6c5ce7);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  transform: scale(1.05);
+}
+
+/* ======= MENSAJE DE ÉXITO ======= */
+p[style*="green"] {
+  background: #dff9fb;
+  border-left: 5px solid #00b894;
+  padding: 12px;
+  color: #2d3436;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #dfe6e9;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
